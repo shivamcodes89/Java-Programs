@@ -1,6 +1,8 @@
-package ArrayListAssignment;
+package Array_List_Program.ArrayListAssignment;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class SortStudentMarks {
     public static void main(String[] args) {

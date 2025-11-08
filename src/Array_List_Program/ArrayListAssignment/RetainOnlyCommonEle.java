@@ -1,8 +1,8 @@
-package ArrayListAssignment;
+package Array_List_Program.ArrayListAssignment;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Arrays;
+import java.util.List;
 
 public class RetainOnlyCommonEle {
     public static void main(String[] args) {
