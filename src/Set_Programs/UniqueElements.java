@@ -1,12 +1,12 @@
 package Set_Programs;
 
-import java.util.LinkedHashSet;
+import java.util.HashSet;
 import java.util.Scanner;
 import java.util.Set;
 
 public class UniqueElements {
     public static void main(String[] args) {
-        Set<Integer> set = new LinkedHashSet<>();
+        Set<Integer> set = new HashSet<>();
         Scanner sc = new Scanner(System.in);
         int num = sc.nextInt();
         if(num<1 || num>1000){
