@@ -11,30 +11,29 @@ public class PalindromePossible {
         int num = sc.nextInt();
         int[] fre = new int[10];
         int totalDigit = 0;
-        int num1 = num;
-        int num2 = 0;
+        int num1 = 0;
         while(num > 0){
             int digit = num % 10;
             fre[digit]++;
             totalDigit++;
             num = num / 10;
         }
-        for(int i = 0; i < 10; i++){
+        for(int i=0; i< fre.length; i++){
             if(fre[i] % 2 != 0){
-                num2++;
+                num1++;
             }
         }
         if(totalDigit % 2 == 0){
-            if(num2 == 0){
+            if(num1 == 0){
                 System.out.println("true");
-            } else {
+            }else{
                 System.out.println("false");
             }
         }
-        else {
-            if(num2 == 1){
+        else{
+            if(num1 == 1){
                 System.out.println("true");
-            } else {
+            }else{
                 System.out.println("false");
             }
         }
