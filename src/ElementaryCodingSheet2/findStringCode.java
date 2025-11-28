@@ -4,28 +4,26 @@ import java.util.Scanner;
 public class findStringCode {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        String str = sc.nextLine().toUpperCase();
-
-        String[] words = str.split(" ");
-        StringBuilder result = new StringBuilder();
-
-        for(String word : words){
+        String str = sc.nextLine();
+        String[] arr = str.split(" ");
+        String result = "";
+        for(String word : arr){
+            word = word.toUpperCase();
+            int i = 0;
+            int j = word.length() - 1;
             int sum = 0;
-            int left = 0;
-            int right = word.length() - 1;
-
-            while(left <= right){
-                int a = word.charAt(left) - 'A' + 1;
-                int b = word.charAt(right) - 'A' + 1;
-                sum += Math.abs(a - b);
-                left++;
-                right--;
+            while (i < j){
+                int left = word.charAt(i) - 'A' + 1;
+                int right = word.charAt(j) - 'A' + 1;
+                sum = sum +  Math.abs(left - right);
+                i++;
+                j--;
             }
-
-            // har word ka 3-digit format
-            result.append(String.format("%03d", sum));
+            if(i == j){
+                sum = sum + (word.charAt(i) - 'A' + 1);
+            }
+            result = result + sum;
         }
-
-        System.out.println(result.toString());
+        System.out.println(Integer.parseInt(result));
     }
 }
