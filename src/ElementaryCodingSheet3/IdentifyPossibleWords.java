@@ -1,3 +1,4 @@
+package ElementaryCodingSheet3;
 public class IdentifyPossibleWords {
     public static void main(String[] args) {
         String input1 = "Fi_er";
